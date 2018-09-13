@@ -16,10 +16,6 @@
         <div v-if="validationShow==false" class="validation_button" @click="validationNow">{{second}}</div>
         <div v-if="validationShow==true" :class="{validation_button:true,validation_button1:validationShow==true}">{{second}}<span>{{count}}s</span></div>
       </div>
-      <div class="identity">
-        <div class="identity_box"><input id="teacher" class="rdo" type="radio" v-model="identity" value="5"><label for="teacher">合作教师</label></div>
-        <div class="identity_box"><input id="student" class="rdo" type="radio" v-model="identity" value="4"><label for="student">普通用户</label></div>
-      </div>
       <div class="signup" @click="signupNow">注册</div>
       <div class="to_login">已有账号？立即<span @click="toLogin">登录</span></div>
     </div>
@@ -42,7 +38,6 @@ export default {
       password1: '',
       mobile: '',
       validation: '',
-      identity: '5',
       second: '获取验证码',
       validationShow: false,
       count: 70,
@@ -121,7 +116,7 @@ export default {
       if (this.username !== '' & this.show0 === false) {
         this.axios
           .post(
-            'url',
+            '/username',
             {
               user_name: this.username
             }
@@ -171,13 +166,12 @@ export default {
     },
     signupNow: function () {
       if (this.username !== '' && this.password1 !== '' && this.validation !== '' && this.mobile !== '' && this.show0 === false && this.show1 === false && this.show2 === false && this.show3 === false && this.show4 === false) {
-        let url = 'url';
+        let url = '/signup';
         const params = {
           mobile: this.mobile,
           password: this.password1,
           captcha: this.validation,
-          user_name: this.username,
-          type: this.identity
+          user_name: this.username
         };
         this.axios
           .post(url, params)
@@ -277,24 +271,6 @@ export default {
   .validation_button1{
     border:1px solid #D6D6D6;
     color:#D6D6D6;
-  }
-  .identity{
-    flex: 0 0 285px;
-    height: 40px;
-    margin-top: 14px;
-    display: flex;
-    justify-content: space-between;
-  }
-  .identity .identity_box{
-    flex:0 0 50%;
-    height:40px;
-  }
-  .identity .identity_box label{
-    display: inline-block;
-    margin-left:30px;
-    line-height:40px;
-    font-size:13px;
-    color:#666666;
   }
   .signup {
     flex: 0 0 285px;
