@@ -170,7 +170,7 @@ export default {
         const params = {
           mobile: this.mobile,
           password: this.password1,
-          captcha: this.validation,
+          mobile_code: this.validation,
           user_name: this.username
         };
         this.axios
