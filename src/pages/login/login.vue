@@ -2,6 +2,8 @@
   <div>
     <navbar :title="title"></navbar>
     <div class="contentbox" v-if="realySignup==false">
+      <input id="1" type="text" placeholder="请输入用户名或绑定的手机号" style="display:none;">
+      <input id="2" type="password" placeholder="请输入密码" style="display:none;">
       <input class="input" type="text" placeholder="请输入用户名或绑定的手机号" v-model="username">
       <input class="input" type="password" placeholder="请输入密码" v-model="password">
       <div class="remember">
@@ -13,20 +15,6 @@
       <div class="login" @click="loginNow">登录</div>
       <div class="to_signup">还没有账号？立即<span @click="toSignup">注册</span></div>
       <div class="line"><span>第三方登录</span></div>
-      <div class="third_login">
-        <div class="third">
-          <img src="../../assets/img/wechat.png" alt="">
-          <div>微信</div>
-        </div>
-        <div class="third">
-          <img src="../../assets/img/qq.png" alt="">
-          <div>QQ</div>
-        </div>
-        <div class="third">
-          <img src="../../assets/img/microblog.png" alt="">
-          <div>微博</div>
-        </div>
-      </div>
     </div>
     <div class="contentbox" v-if="realySignup==true" style="font-size:20px;">恭喜您登录成功，移动站正在开发中</div>
   </div>
@@ -51,7 +39,7 @@ export default {
   methods: {
     loginNow: function () {
       this.axios
-        .post('url', {
+        .post('/login', {
           user_name: this.username,
           password: this.password
         })
@@ -199,24 +187,5 @@ export default {
   .to_signup span{
     color:#C80E42;
     text-decoration: underline;
-  }
-  .third_login{
-    flex: 0 0 285px;
-    display: flex;
-    justify-content: space-between;
-  }
-  .third{
-    flex:0 0 33.33%;
-    margin-top:16px;
-  }
-  .third img{
-    width:35px;
-    height:35px;
-    margin:0 auto;
-  }
-  .third div{
-    text-align: center;
-    color:#6F788D;
-    margin-top:8px;
   }
 </style>

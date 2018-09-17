@@ -16,6 +16,10 @@
         <div v-if="validationShow==false" class="validation_button" @click="validationNow">{{second}}</div>
         <div v-if="validationShow==true" :class="{validation_button:true,validation_button1:validationShow==true}">{{second}}<span>{{count}}s</span></div>
       </div>
+      <div class="validation">
+        <input class="validation_text" type="text" placeholder="请输入图像验证码" v-model="validation1">
+        <img class="validation_pictrue" :src="imgValidation" alt="" @click="picturevalidation">
+      </div>
       <div class="signup" @click="signupNow">注册</div>
       <div class="to_login">已有账号？立即<span @click="toLogin">登录</span></div>
     </div>
@@ -38,6 +42,8 @@ export default {
       password1: '',
       mobile: '',
       validation: '',
+      validation1: '',
+      imgValidation: '',
       second: '获取验证码',
       validationShow: false,
       count: 70,
@@ -109,6 +115,9 @@ export default {
       deep: true
     }
   },
+  created: function () {
+    this.picturevalidation();
+  },
   mounted: function () {},
   methods: {
     // 验证用户名是否重名
@@ -163,6 +172,26 @@ export default {
             console.log(error);
           });
       }
+    },
+    picturevalidation: function () {
+      // this.axios
+      //   .get('/getPicture')
+      //   .then(response => {
+      //     this.imgValidation = response.data.data;
+      //   });
+      let that = this;
+      const instance = this.axios.create({
+        url: '/getPicture',
+        method: 'get',
+        transformResponse: [function (data) {
+          // 对 data 进行任意转换处理
+          // console.log(typeof (data));
+          that.imgValidation = JSON.parse(data).data;
+          console.log(that.imgValidation);
+        }],
+        withCredentials: true
+      });
+      instance();
     },
     signupNow: function () {
       if (this.username !== '' && this.password1 !== '' && this.validation !== '' && this.mobile !== '' && this.show0 === false && this.show1 === false && this.show2 === false && this.show3 === false && this.show4 === false) {
@@ -271,6 +300,14 @@ export default {
   .validation_button1{
     border:1px solid #D6D6D6;
     color:#D6D6D6;
+  }
+  .validation_pictrue{
+    flex:0 0 100px;
+    height:40px;
+    border:1px solid #258CE3;
+    line-height:40px;
+    text-align: center;
+    box-sizing: border-box;
   }
   .signup {
     flex: 0 0 285px;
