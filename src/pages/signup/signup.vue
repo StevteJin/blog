@@ -189,17 +189,19 @@ export default {
           that.imgValidation = JSON.parse(data).data;
           console.log(that.imgValidation);
         }],
+        // 前后端分离请求要携带cookie必须带这个
         withCredentials: true
       });
       instance();
     },
     signupNow: function () {
-      if (this.username !== '' && this.password1 !== '' && this.validation !== '' && this.mobile !== '' && this.show0 === false && this.show1 === false && this.show2 === false && this.show3 === false && this.show4 === false) {
+      if (this.username !== '' && this.password1 !== '' && this.validation !== '' && this.validation1 !== '' && this.mobile !== '' && this.show0 === false && this.show1 === false && this.show2 === false && this.show3 === false && this.show4 === false) {
         let url = '/signup';
         const params = {
           mobile: this.mobile,
           password: this.password1,
           mobile_code: this.validation,
+          validation: this.validation1,
           user_name: this.username
         };
         this.axios
