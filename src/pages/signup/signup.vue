@@ -20,7 +20,8 @@
                   <v-text-field prepend-icon="phonelink_ring" label="手机号" type="text"  v-model="mobile" ref="mobile" :rules="[rules.required, rules.counter,rules.mobile]"></v-text-field>
                   <v-layout row justify-space-between>
                     <v-text-field prepend-icon="phonelink_setup" label="手机验证码" type="text"  v-model="validation" ref="validation" :rules="[rules.required]"></v-text-field>
-                    <v-btn color="primary" block depressed class="button-right">获取验证码</v-btn>
+                    <v-btn color="primary" block depressed class="button-right"  @click="validationNow"  v-if="validationShow==false">{{second}}</v-btn>
+                    <v-btn disabled block depressed class="button-right"  @click="validationNow"  v-if="validationShow==true">{{second}}<span>{{count}}s</span></v-btn>
                   </v-layout>
                   <v-layout row justify-space-between>
                     <v-text-field prepend-icon="insert_photo" label="图形证码" type="text"  v-model="validation1" ref="validation1" :rules="[rules.required]"></v-text-field>
@@ -69,6 +70,10 @@ export default {
           return pattern.test(value) || '手机号不符合规则';
         }
       },
+      second: '获取验证码',
+      validationShow: false,
+      count: 70,
+      imgValidation: '',
       formHasErrors: false
     };
   },
@@ -85,6 +90,57 @@ export default {
     }
   },
   methods: {
+    validationNow: function () {
+      if (this.mobile !== '') {
+        this.axios
+          .post('/getregmsg', {
+            mobile: this.mobile
+          })
+          .then(response => {
+            // console.log(JSON.stringify(response.data));
+            console.log(typeof (response.data.code));
+            if (response.data.code === 100) {
+              this.second = '已发送';
+              this.validationShow = true;
+              this.timer = setInterval(() => {
+                if (this.count > 0 && this.count <= 70) {
+                  this.count--;
+                } else {
+                  clearInterval(this.timer);
+                  this.validationShow = false;
+                  this.second = '获取验证码';
+                  this.timer = null;
+                  this.count = 70;
+                }
+              }, 1000);
+            } else { this.$toast(response.data.msg); }
+          })
+          .catch(function (error) {
+            console.log(error);
+          });
+      }
+    },
+    picturevalidation: function () {
+      // this.axios
+      //   .get('/getPicture')
+      //   .then(response => {
+      //     this.imgValidation = response.data.data;
+      //   });
+      let that = this;
+      const instance = this.axios.create({
+        url: '/getPicture',
+        method: 'get',
+        transformResponse: [function (data) {
+          // 对 data 进行任意转换处理
+          // console.log(typeof (data));
+          that.imgValidation = JSON.parse(data).data;
+          console.log(that.imgValidation);
+        }],
+        // 前后端分离请求要携带cookie必须带这个
+        withCredentials: true
+      });
+      instance();
+    },
     submit () {
       console.log(222);
       this.formHasErrors = false;
