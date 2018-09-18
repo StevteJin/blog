@@ -8,6 +8,8 @@ axios.defaults.timeout = 5000;
 // 设置接口的域名
 axios.defaults.baseURL = 'http://localhost:8088/';
 
+axios.defaults.withCredentials = true;// 让ajax携带cookie
+
 // 添加请求拦截器
 axios.interceptors.request.use(
   config => {
