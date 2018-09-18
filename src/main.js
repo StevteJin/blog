@@ -3,6 +3,11 @@
 import Vue from 'vue';
 import App from './App';
 import router from './router';
+import Vuetify from 'vuetify';
+import 'vuetify/dist/vuetify.min.css';
+import 'material-design-icons-iconfont/dist/material-design-icons.css'; // Ensure you are using css-loader
+import 'babel-polyfill';// IE垫片
+
 import 'lib-flexible/flexible';
 import { NavBar, Row, Col, Toast } from 'vant';
 // 引入axios
@@ -10,6 +15,7 @@ import axios from './http';
 
 Vue.prototype.axios = axios;
 
+Vue.use(Vuetify);
 Vue.use(NavBar);
 Vue.use(Row);
 Vue.use(Col);
