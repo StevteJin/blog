@@ -52,7 +52,7 @@ export default {
       validation1: '',
       rules: {
         required: value => !!value || '内容不能为空',
-        counter: value => value.length <= 20 || '长度不得超过12位',
+        counter: value => value.length <= 12 || '长度不得超过12位',
         username: value => {
           const pattern = /(?=.*[a-zA-Z])(?=.*[0-9])[a-zA-Z0-9]{8,12}/;
           return pattern.test(value) || '用户名不符合规则';
