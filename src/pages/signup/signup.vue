@@ -25,8 +25,7 @@
                   </v-layout>
                   <v-layout row justify-space-between>
                     <v-text-field prepend-icon="insert_photo" label="图形证码" type="text"  v-model="validation1" ref="validation1" :rules="[rules.required]"></v-text-field>
-                    <img src="" alt="">
-                    <v-btn color="primary" block depressed class="button-right"></v-btn>
+                    <v-btn block depressed class="button-right" @click="picturevalidation"><img :src="imgValidation" alt="" @click="picturevalidation"></v-btn>
                   </v-layout>
                 </v-form>
               </v-card-text>
@@ -76,6 +75,9 @@ export default {
       imgValidation: '',
       formHasErrors: false
     };
+  },
+  created: function () {
+    this.picturevalidation();
   },
   computed: {
     form () {
@@ -149,6 +151,28 @@ export default {
         if (!this.form[f]) {
           this.formHasErrors = true;
           this.$refs[f].validate(true);
+        } else {
+          let url = '/signup';
+          const params = {
+            mobile: this.mobile,
+            password: this.password1,
+            mobile_code: this.validation,
+            validation: this.validation1,
+            user_name: this.username
+          };
+          this.axios
+            .post(url, params)
+            .then(response => {
+              // console.log(JSON.stringify(response.data));
+              if (response.data.code === 100) {
+                this.$toast('恭喜您注册成功，移动站正在开发中，敬请期待');
+              } else {
+                this.$toast(response.data.msg);
+              }
+            })
+            .catch(function (error) {
+              console.log(error);
+            });
         };
       });
     }
