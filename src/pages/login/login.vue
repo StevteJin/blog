@@ -102,7 +102,7 @@ export default {
           .then(response => {
             // console.log(JSON.stringify(response.data));
             if (response.data.code === 100) {
-              this.$toast('恭喜您注册成功，移动站正在开发中，敬请期待');
+              this.$toast('恭喜您登录成功，移动站正在开发中，敬请期待');
             } else {
               this.$toast(response.data.msg);
             }
