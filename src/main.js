@@ -9,17 +9,12 @@ import 'material-design-icons-iconfont/dist/material-design-icons.css'; // Ensur
 import 'babel-polyfill';// IE垫片
 
 import 'lib-flexible/flexible';
-import { NavBar, Row, Col, Toast } from 'vant';
 // 引入axios
 import axios from './http';
 
 Vue.prototype.axios = axios;
 
 Vue.use(Vuetify);
-Vue.use(NavBar);
-Vue.use(Row);
-Vue.use(Col);
-Vue.use(Toast);
 
 Vue.config.productionTip = false;
 

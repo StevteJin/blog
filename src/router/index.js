@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import Router from 'vue-router';
+import index from '@/pages/index/index';
 import signup from '@/pages/signup/signup';
 import login from '@/pages/login/login';
 import forgetPassword from '@/pages/forgetPassword/forgetPassword';
@@ -7,6 +8,12 @@ import forgetPassword from '@/pages/forgetPassword/forgetPassword';
 Vue.use(Router);
 
 const routes = [{
+  path: '/',
+  meta: {
+    title: '首页'
+  },
+  component: index
+}, {
   path: '/signup',
   meta: {
     title: '注册'
