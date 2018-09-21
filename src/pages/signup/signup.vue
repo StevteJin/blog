@@ -9,7 +9,7 @@
                 <v-toolbar-title>注册</v-toolbar-title>
               </v-toolbar>
               <v-card-text>
-                <v-form>
+                <v-form  ref="form">
                   <!--这里为了防止浏览器自动填充表单 s-->
                   <input type="text" style="display:none;" name="username">
                   <input type="password" style="display:none;" name="password">
@@ -144,37 +144,29 @@ export default {
       instance();
     },
     submit () {
-      console.log(222);
-      this.formHasErrors = false;
-      Object.keys(this.form).forEach(f => {
-        console.log(f);
-        if (!this.form[f]) {
-          this.formHasErrors = true;
-          this.$refs[f].validate(true);
-        } else {
-          let url = '/signup';
-          const params = {
-            mobile: this.mobile,
-            password: this.password1,
-            mobile_code: this.validation,
-            validation: this.validation1,
-            user_name: this.username
-          };
-          this.axios
-            .post(url, params)
-            .then(response => {
-              // console.log(JSON.stringify(response.data));
-              if (response.data.code === 100) {
-                this.$toast('恭喜您注册成功，移动站正在开发中，敬请期待');
-              } else {
-                this.$toast(response.data.msg);
-              }
-            })
-            .catch(function (error) {
-              console.log(error);
-            });
+      if (this.$refs.form.validate()) {
+        let url = '/signup';
+        const params = {
+          mobile: this.mobile,
+          password: this.password1,
+          mobile_code: this.validation,
+          validation: this.validation1,
+          user_name: this.username
         };
-      });
+        this.axios
+          .post(url, params)
+          .then(response => {
+            // console.log(JSON.stringify(response.data));
+            if (response.data.code === 100) {
+              this.$toast('恭喜您注册成功，移动站正在开发中，敬请期待');
+            } else {
+              this.$toast(response.data.msg);
+            }
+          })
+          .catch(function (error) {
+            console.log(error);
+          });
+      };
     }
   }
 };
