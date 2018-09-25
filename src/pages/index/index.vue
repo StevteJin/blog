@@ -6,19 +6,19 @@
           <div class="about_me">
             <h2>关于我</h2>
             <ul>
-              <i><img src="images/4.jpg"></i>
+              <i><img src="../../../static/img/4.jpg"></i>
               <p><b>青松</b>，一个80后草根男站长！15年入行。一直潜心研究web前端技术，一边工作一边积累经验，分享一些技术心得。</p>
             </ul>
           </div>
           <div class="wdxc">
             <h2>我的相册</h2>
             <ul>
-              <li><a href="/"><img src="images/7.jpg"></a></li>
-              <li><a href="/"><img src="images/8.jpg"></a></li>
-              <li><a href="/"><img src="images/9.jpg"></a></li>
-              <li><a href="/"><img src="images/10.jpg"></a></li>
-              <li><a href="/"><img src="images/11.jpg"></a></li>
-              <li><a href="/"><img src="images/12.jpg"></a></li>
+              <li><a href="/"><img src="../../../static/img/7.jpg"></a></li>
+              <li><a href="/"><img src="../../../static/img/8.jpg"></a></li>
+              <li><a href="/"><img src="../../../static/img/9.jpg"></a></li>
+              <li><a href="/"><img src="../../../static/img/10.jpg"></a></li>
+              <li><a href="/"><img src="../../../static/img/11.jpg"></a></li>
+              <li><a href="/"><img src="../../../static/img/12.jpg"></a></li>
             </ul>
           </div>
           <div class="search">
@@ -61,40 +61,40 @@
           <div class="guanzhu">
             <h2>关注我 么么哒</h2>
             <ul>
-              <img src="images/wx.jpg">
+              <img src="../../../static/img/wx.jpg">
             </ul>
           </div>
       </aside>
       <main class="r_box">
-        <li><i><a href="/"><img src="images/1.jpg"></a></i>
+        <li><i><a href="/"><img src="../../../static/img/1.jpg"></a></i>
           <h3><a href="/">你是什么人便会遇上什么人</a></h3>
           <p>有时就为了一句狠话，像心头一口毒钉，永远麻痺着亲密感情交流。恶言，真要慎出，平日多誠心爱语，乃最简易之佈施。</p>
         </li>
-        <li><i><a href="/"><img src="images/2.jpg"></a></i>
+        <li><i><a href="/"><img src="../../../static/img/2.jpg"></a></i>
           <h3><a href="/">爱情没有永远，地老天荒也走不完</a></h3>
           <p>也许，爱情没有永远，地老天荒也走不完，生命终结的末端，苦短情长。站在岁月的边端，那些美丽的定格，心伤的绝恋，都被四季的掩埋，一去不返。徒剩下这荒芜的花好月圆，一路相随，流离天涯背负了谁的思念？</p>
         </li>
-        <li><i><a href="/"><img src="images/3.jpg"></a></i>
+        <li><i><a href="/"><img src="../../../static/img/3.jpg"></a></i>
           <h3><a href="/">男孩都有浪漫的小情怀——浪漫的求婚词</a></h3>
           <p>还在为浪漫的求婚词而烦恼不知道该怎么说吗？男孩子都有着浪漫的小情怀，对于求婚更是抱着满满的浪漫期待，也希望在求婚那一天对方可以给自己一个最浪漫的求婚词。</p>
         </li>
-        <li><i><a href="/"><img src="images/4.jpg"></a></i>
+        <li><i><a href="/"><img src="../../../static/img/4.jpg"></a></i>
           <h3><a href="/">擦肩而过</a></h3>
           <p>《擦肩而过》文/清河鱼 编绘/天朝羽打开一扇窗，我不曾把你想得平常。看季节一一过往。你停留的那个地方，是否依然花儿开放？在夜里守靠着梦中的，想那仿佛前世铭刻进心肠的</p>
         </li>
-        <li><i><a href="/"><img src="images/1.jpg"></a></i>
+        <li><i><a href="/"><img src="../../../static/img/1.jpg"></a></i>
           <h3><a href="/">你是什么人便会遇上什么人</a></h3>
           <p>有时就为了一句狠话，像心头一口毒钉，永远麻痺着亲密感情交流。恶言，真要慎出，平日多誠心爱语，乃最简易之佈施。</p>
         </li>
-        <li><i><a href="/"><img src="images/2.jpg"></a></i>
+        <li><i><a href="/"><img src="../../../static/img/2.jpg"></a></i>
           <h3><a href="/">爱情没有永远，地老天荒也走不完</a></h3>
           <p>也许，爱情没有永远，地老天荒也走不完，生命终结的末端，苦短情长。站在岁月的边端，那些美丽的定格，心伤的绝恋，都被四季的掩埋，一去不返。徒剩下这荒芜的花好月圆，一路相随，流离天涯背负了谁的思念？</p>
         </li>
-        <li><i><a href="/"><img src="images/3.jpg"></a></i>
+        <li><i><a href="/"><img src="../../../static/img/3.jpg"></a></i>
           <h3><a href="/">男孩都有浪漫的小情怀——浪漫的求婚词</a></h3>
           <p>还在为浪漫的求婚词而烦恼不知道该怎么说吗？男孩子都有着浪漫的小情怀，对于求婚更是抱着满满的浪漫期待，也希望在求婚那一天对方可以给自己一个最浪漫的求婚词。</p>
         </li>
-        <li><i><a href="/"><img src="images/4.jpg"></a></i>
+        <li><i><a href="/"><img src="../../../static/img/4.jpg"></a></i>
           <h3><a href="/">擦肩而过</a></h3>
           <p>《擦肩而过》文/清河鱼 编绘/天朝羽打开一扇窗，我不曾把你想得平常。看季节一一过往。你停留的那个地方，是否依然花儿开放？在夜里守靠着梦中的，想那仿佛前世铭刻进心肠的</p>
         </li>
@@ -102,23 +102,23 @@
           <h3><a href="/">男孩都有浪漫的小情怀——浪漫的求婚词</a></h3>
           <p>还在为浪漫的求婚词而烦恼不知道该怎么说吗？男孩子都有着浪漫的小情怀，对于求婚更是抱着满满的浪漫期待，也希望在求婚那一天对方可以给自己一个最浪漫的求婚词。</p>
         </li>
-        <li><i><a href="/"><img src="images/5.jpg"></a></i>
+        <li><i><a href="/"><img src="../../../static/img/5.jpg"></a></i>
           <h3><a href="/">擦肩而过</a></h3>
           <p>《擦肩而过》文/清河鱼 编绘/天朝羽打开一扇窗，我不曾把你想得平常。看季节一一过往。你停留的那个地方，是否依然花儿开放？在夜里守靠着梦中的，想那仿佛前世铭刻进心肠的</p>
         </li>
-        <li><i><a href="/"><img src="images/6.jpg"></a></i>
+        <li><i><a href="/"><img src="../../../static/img/6.jpg"></a></i>
           <h3><a href="/">男孩都有浪漫的小情怀——浪漫的求婚词</a></h3>
           <p>还在为浪漫的求婚词而烦恼不知道该怎么说吗？男孩子都有着浪漫的小情怀，对于求婚更是抱着满满的浪漫期待，也希望在求婚那一天对方可以给自己一个最浪漫的求婚词。</p>
         </li>
-        <li><i><a href="/"><img src="images/7.jpg"></a></i>
+        <li><i><a href="/"><img src="../../../static/img/7.jpg"></a></i>
           <h3><a href="/">你是什么人便会遇上什么人</a></h3>
           <p>有时就为了一句狠话，像心头一口毒钉，永远麻痺着亲密感情交流。恶言，真要慎出，平日多誠心爱语，乃最简易之佈施。</p>
         </li>
-        <li><i><a href="/"><img src="images/8.jpg"></a></i>
+        <li><i><a href="/"><img src="../../../static/img/8.jpg"></a></i>
           <h3><a href="/">爱情没有永远，地老天荒也走不完</a></h3>
           <p>也许，爱情没有永远，地老天荒也走不完，生命终结的末端，苦短情长。站在岁月的边端，那些美丽的定格，心伤的绝恋，都被四季的掩埋，一去不返。徒剩下这荒芜的花好月圆，一路相随，流离天涯背负了谁的思念？</p>
         </li>
-        <li><i><a href="/"><img src="images/9.jpg"></a></i>
+        <li><i><a href="/"><img src="../../../static/img/9.jpg"></a></i>
           <h3><a href="/">擦肩而过</a></h3>
           <p>《擦肩而过》文/清河鱼 编绘/天朝羽打开一扇窗，我不曾把你想得平常。看季节一一过往。你停留的那个地方，是否依然花儿开放？在夜里守靠着梦中的，想那仿佛前世铭刻进心肠的</p>
         </li>
