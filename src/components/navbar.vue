@@ -44,7 +44,7 @@ export default {
     this.routePath = this.$route.path;
   },
   mounted: function () {
-
+    this.isHeaderScroll();
   },
   methods: {
     toggle: function () {
