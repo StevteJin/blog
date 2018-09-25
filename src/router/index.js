@@ -1,10 +1,11 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import index from '@/pages/index/index';
+
 import signup from '@/pages/signup/signup';
 import login from '@/pages/login/login';
 import forgetPassword from '@/pages/forgetPassword/forgetPassword';
 
+import index from '@/pages/index/index';
 Vue.use(Router);
 
 const routes = [{

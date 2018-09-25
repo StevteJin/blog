@@ -3,8 +3,9 @@
 import Vue from 'vue';
 import App from './App';
 import router from './router';
+// 引入jquery
+import 'jquery';
 import Vuetify from 'vuetify';
-import 'vuetify/dist/vuetify.min.css';
 import 'material-design-icons-iconfont/dist/material-design-icons.css'; // Ensure you are using css-loader
 import 'babel-polyfill';// IE垫片
 
