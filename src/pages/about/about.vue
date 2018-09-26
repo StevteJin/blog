@@ -1,0 +1,108 @@
+<template>
+  <div>
+    <navbar></navbar>
+    <article>
+        <aside class="l_box">
+            <div class="about_me">
+            <h2>关于我</h2>
+            <ul>
+                <i><img src="../../../static/img/1.jpg"></i>
+                <p><b>青松</b>，一个80后草根男站长！09年入行。一直潜心研究web前端技术，一边工作一边积累经验，分享一些个人博客模板，以及SEO优化等心得。</p>
+            </ul>
+            </div>
+            <div class="wdxc">
+            <h2>我的相册</h2>
+            <ul>
+                <li><a href="/"><img src="../../../static/img/1.jpg"></a></li>
+                <li><a href="/"><img src="../../../static/img/1.jpg"></a></li>
+                <li><a href="/"><img src="../../../static/img/1.jpg"></a></li>
+                <li><a href="/"><img src="../../../static/img/1.jpg"></a></li>
+                <li><a href="/"><img src="../../../static/img/1.jpg"></a></li>
+                <li><a href="/"><img src="../../../static/img/1.jpg"></a></li>
+            </ul>
+            </div>
+            <div class="search">
+            <form action="/e/search/index.php" method="post" name="searchform" id="searchform">
+                <input name="keyboard" id="keyboard" class="input_text" value="请输入关键字词" style="color: rgb(153, 153, 153);" onfocus="if(value=='请输入关键字词'){this.style.color='#000';value=''}" onblur="if(value==''){this.style.color='#999';value='请输入关键字词'}" type="text">
+                <input name="show" value="title" type="hidden">
+                <input name="tempid" value="1" type="hidden">
+                <input name="tbname" value="news" type="hidden">
+                <input name="Submit" class="input_submit" value="搜索" type="submit">
+            </form>
+            </div>
+            <div class="fenlei">
+            <h2>文章分类</h2>
+            <ul>
+                <li><a href="/">学无止境（33）</a></li>
+                <li><a href="/">日记（19）</a></li>
+                <li><a href="/">慢生活（520）</a></li>
+                <li><a href="/">美文欣赏（40）</a></li>
+            </ul>
+            </div>
+            <div class="guanzhu">
+            <h2>关注我 么么哒</h2>
+            <ul>
+                <img src="../../../static/img/wx.jpg">
+            </ul>
+            </div>
+        </aside>
+        <main class="r_box">
+            <div class="about">
+            <p>青松，男，一个90后草根男站长！15年入行。一直潜心研究web前端技术，一边工作一边积累经验，分享一些个人博客模板，以及SEO优化等心得。我入行早，大家也亲切的叫我&ldquo;青姐&rdquo;。<br />
+                <br />
+                    SEO奋斗了将近两年时间，个人博客网站百度排名也从之前的30页后，排到了第一页。期间有很多的不容易，但是都没有放弃过。入了这一行，就深深的喜欢上它。我喜欢一句话&ldquo;冥冥中该来则来，无处可逃&rdquo;。<br />
+                    <br />
+            <img src="../../../static/img/1.jpg">        近几年我也发现个人博客排前几页的也有很多是我做过的模板，感谢各位站长的欣赏，我仔细看过他们的网站。他们在我原模板的基础上有修改，而且他们做的原创内容都是值得一读的。有时候甚至排名都超过了我个人博客网站的排名。<br />
+                    <br />
+                    现在很多人向我请教如何做好SEO，我想说的是，一是&ldquo;代码&rdquo;，一定要简单，布局要合理。二是&ldquo;内容&rdquo;，一定要有原创，伪原创也是可以的。三是&ldquo;持续&rdquo;，这是一个持续性过程，一定要有耐心，SEO不是马上生效的。<br />
+                    <br />
+                    自从入了这一行，也交到了不少朋友，QQ群也不断的壮大起来，280998807(交流群 <span style="color:#FF0000;">已满员</span>)&nbsp; 280998843（技术群），群里的小伙伴们也很积极的帮助新朋友解决问题，如果你想加入我们，这个大家庭的门，永远给你敞开！另外微信群已于2018.4.13日开通（已满100，只接受群主邀请，可加我个人微信进群 。我的个人微信号 yangqq_1987）</p>
+                <br />
+                <br />
+                <p>
+                    SEO奋斗了将近两年时间，个人博客网站百度排名也从之前的30页后，排到了第一页。期间有很多的不容易，但是都没有放弃过。入了这一行，就深深的喜欢上它。我喜欢一句话&ldquo;冥冥中该来则来，无处可逃&rdquo;。<br />
+                    <br />
+            <img src="../../../static/img/1.jpg">        近几年我也发现个人博客排前几页的也有很多是我做过的模板，感谢各位站长的欣赏，我仔细看过他们的网站。他们在我原模板的基础上有修改，而且他们做的原创内容都是值得一读的。有时候甚至排名都超过了我个人博客网站的排名。<br />
+                    <br />
+                    现在很多人向我请教如何做好SEO，我想说的是，一是&ldquo;代码&rdquo;，一定要简单，布局要合理。二是&ldquo;内容&rdquo;，一定要有原创，伪原创也是可以的。三是&ldquo;持续&rdquo;，这是一个持续性过程，一定要有耐心，SEO不是马上生效的。<br />
+                    <br />
+                    自从入了这一行，也交到了不少朋友，QQ群也不断的壮大起来，280998807(交流群 <span style="color:#FF0000;">已满员</span>)&nbsp; 280998843（技术群），群里的小伙伴们也很积极的帮助新朋友解决问题，如果你想加入我们，这个大家庭的门，永远给你敞开！另外微信群已于2018.4.13日开通（已满100，只接受群主邀请，可加我个人微信进群.</p>
+                <br />
+                <h2>About my blog</h2>
+                &nbsp;
+                <p>域 名：www.yangqq.com 创建于2011年01月12日&nbsp;</p>
+                <br />
+                <p>服务器：阿里云服务器&nbsp;&nbsp;<a href="https://promotion.aliyun.com/ntms/act/ambassador/sharetouser.html?userCode=8smrzoqa&amp;productCode=vm" target="_blank"><span style="color:#FF0000;"><strong>前往阿里云官网购买&gt;&gt;</strong></span></a></p>
+                <br />
+                <p>备案号：蜀ICP备11002373号-1</p>
+                <br />
+                <p>程 序：PHP 帝国CMS7.5</p>
+            </div>
+        </main>
+    </article>
+    <bottomfooter></bottomfooter>
+  </div>
+</template>
+
+<script>
+import navbar from '@/components/navbar';
+import bottomfooter from '@/components/footer';
+export default {
+  components: {
+    navbar,
+    bottomfooter
+  }
+};
+</script>
+
+<style scoped>
+@import '../../assets/css/common.css';
+.about_me img { width: 100% }
+.about_me p { line-height: 24px; font-size: 14px }
+.about_me i { width: 120px; float: left; clear: left; margin-right: 10px; height: 90px; overflow: hidden }
+.wdxc li { width: 32%; overflow: hidden; float: left; height: 80px; margin-bottom: 2px; margin-right: 2px }
+.wdxc li img {width: 100%; height:100%; -webkit-transition: all 0.5s; -moz-transition: all 0.5s; transition: all 0.5s; }
+.wdxc li img:hover { transform: scale(1.05) }
+.about { padding: 20px; background: rgba(255,255,255,0.8); margin-bottom: 20px; }
+.about img { max-width: 500px; margin: 20px 0; width: 100% }
+</style>
