@@ -7,6 +7,7 @@ import forgetPassword from '@/pages/forgetPassword/forgetPassword';
 
 import index from '@/pages/index/index';
 import photos from '@/pages/photos/photos';
+import diary from '@/pages/diary/diary';
 Vue.use(Router);
 
 const routes = [{
@@ -21,6 +22,12 @@ const routes = [{
     title: '我的相册'
   },
   component: photos
+}, {
+  path: '/diary',
+  meta: {
+    title: '我的日记'
+  },
+  component: diary
 }, {
   path: '/signup',
   meta: {
