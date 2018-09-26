@@ -8,6 +8,9 @@ import forgetPassword from '@/pages/forgetPassword/forgetPassword';
 import index from '@/pages/index/index';
 import photos from '@/pages/photos/photos';
 import diary from '@/pages/diary/diary';
+import about from '@/pages/about/about';
+import msg from '@/pages/msg/msg';
+
 Vue.use(Router);
 
 const routes = [{
@@ -28,6 +31,18 @@ const routes = [{
     title: '我的日记'
   },
   component: diary
+}, {
+  path: '/about',
+  meta: {
+    title: '关于我'
+  },
+  component: about
+}, {
+  path: '/msg',
+  meta: {
+    title: '留言'
+  },
+  component: msg
 }, {
   path: '/signup',
   meta: {
