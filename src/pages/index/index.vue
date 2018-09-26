@@ -140,7 +140,6 @@ export default {
 </script>
 
 <style scoped>
-article { width: 1000px; margin: 80px auto 0; overflow: hidden; zoom: 1; }
 aside { width: 30%; float: left; overflow: hidden; display: block; position: relative; z-index: 1 }
 main { overflow: hidden; width: 68%; float: right; display: block; }
 
@@ -173,19 +172,13 @@ main { overflow: hidden; width: 68%; float: right; display: block; }
 .r_box li:hover h3 a { color: #19585d; }
 
 @media screen and (min-width: 960px) and (max-width: 1023px) {
-  article { width: 96% }
   .tuijian, .guanzhu { width: 270px; }
 }
-@media screen and (min-width: 768px) and (max-width: 959px) {
-  article { width: 96% }
-}
 @media only screen and (min-width: 480px) and (max-width: 767px) {
-article { width: 96% }
 .l_box { display: none }
 .r_box, .infosbox, .picsbox, main { width: 100% }
 }
 @media only screen and (max-width: 479px) {
-article { width: 100% }
 .l_box { display: none }
 .r_box, .infosbox, .picsbox, main { width: 100% }
 .r_box li i { float: none; margin: 0 auto 20px; width: 100%; max-height: initial }
