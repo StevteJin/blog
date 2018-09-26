@@ -21,19 +21,19 @@ export default {
     return {
       navList: [
         {
-          href: '/',
+          href: '#/',
           content: '首页'
         }, {
-          href: '/photos',
+          href: '#/photos',
           content: '我的相册'
         }, {
-          href: '/diary',
+          href: '#/diary',
           content: '我的日记'
         }, {
-          href: '/about',
+          href: '#/about',
           content: '关于我'
         }, {
-          href: '/msg',
+          href: '#/msg',
           content: '留言'
         }
       ],
@@ -41,7 +41,7 @@ export default {
     };
   },
   created: function () {
-    this.routePath = this.$route.path;
+    this.routePath = '#' + this.$route.path;
   },
   mounted: function () {
     this.isHeaderScroll();
