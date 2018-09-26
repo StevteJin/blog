@@ -104,19 +104,16 @@ header { width: 96%; margin: auto }
 }
 @media screen and (min-width: 960px) and (max-width: 1023px) {
 header { width: 96%; margin: auto }
-article { width: 96% }
 nav { width: 96%; }
 #starlist li { padding-left: 20px }
 }
 @media screen and (min-width: 768px) and (max-width: 959px) {
 header { width: 96%; margin: auto }
-article { width: 96% }
 nav { width: 96%; }
 #starlist li { padding-left: 15px }
 }
  @media only screen and (min-width: 480px) and (max-width: 767px) {
 header { width: 96%; margin: auto }
-article { width: 96% }
 .logo { width: 100% }
 nav { width: 100%; position: relative }
 #starlist { display: none; background: rgba(0,0,0,.5); width: 100% }

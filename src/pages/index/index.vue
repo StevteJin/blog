@@ -6,19 +6,19 @@
           <div class="about_me">
             <h2>关于我</h2>
             <ul>
-              <i><img src="../../../static/img/4.jpg"></i>
+              <i><img src="../../../static/img/1.jpg"></i>
               <p><b>青松</b>，一个80后草根男站长！15年入行。一直潜心研究web前端技术，一边工作一边积累经验，分享一些技术心得。</p>
             </ul>
           </div>
           <div class="wdxc">
             <h2>我的相册</h2>
             <ul>
-              <li><a href="/"><img src="../../../static/img/7.jpg"></a></li>
-              <li><a href="/"><img src="../../../static/img/8.jpg"></a></li>
-              <li><a href="/"><img src="../../../static/img/9.jpg"></a></li>
-              <li><a href="/"><img src="../../../static/img/10.jpg"></a></li>
-              <li><a href="/"><img src="../../../static/img/11.jpg"></a></li>
-              <li><a href="/"><img src="../../../static/img/12.jpg"></a></li>
+              <li><a href="/"><img src="../../../static/img/1.jpg"></a></li>
+              <li><a href="/"><img src="../../../static/img/1.jpg"></a></li>
+              <li><a href="/"><img src="../../../static/img/1.jpg"></a></li>
+              <li><a href="/"><img src="../../../static/img/1.jpg"></a></li>
+              <li><a href="/"><img src="../../../static/img/1.jpg"></a></li>
+              <li><a href="/"><img src="../../../static/img/1.jpg"></a></li>
             </ul>
           </div>
           <div class="search">
@@ -70,15 +70,15 @@
           <h3><a href="/">你是什么人便会遇上什么人</a></h3>
           <p>有时就为了一句狠话，像心头一口毒钉，永远麻痺着亲密感情交流。恶言，真要慎出，平日多誠心爱语，乃最简易之佈施。</p>
         </li>
-        <li><i><a href="/"><img src="../../../static/img/2.jpg"></a></i>
+        <li><i><a href="/"><img src="../../../static/img/1.jpg"></a></i>
           <h3><a href="/">爱情没有永远，地老天荒也走不完</a></h3>
           <p>也许，爱情没有永远，地老天荒也走不完，生命终结的末端，苦短情长。站在岁月的边端，那些美丽的定格，心伤的绝恋，都被四季的掩埋，一去不返。徒剩下这荒芜的花好月圆，一路相随，流离天涯背负了谁的思念？</p>
         </li>
-        <li><i><a href="/"><img src="../../../static/img/3.jpg"></a></i>
+        <li><i><a href="/"><img src="../../../static/img/1.jpg"></a></i>
           <h3><a href="/">男孩都有浪漫的小情怀——浪漫的求婚词</a></h3>
           <p>还在为浪漫的求婚词而烦恼不知道该怎么说吗？男孩子都有着浪漫的小情怀，对于求婚更是抱着满满的浪漫期待，也希望在求婚那一天对方可以给自己一个最浪漫的求婚词。</p>
         </li>
-        <li><i><a href="/"><img src="../../../static/img/4.jpg"></a></i>
+        <li><i><a href="/"><img src="../../../static/img/1.jpg"></a></i>
           <h3><a href="/">擦肩而过</a></h3>
           <p>《擦肩而过》文/清河鱼 编绘/天朝羽打开一扇窗，我不曾把你想得平常。看季节一一过往。你停留的那个地方，是否依然花儿开放？在夜里守靠着梦中的，想那仿佛前世铭刻进心肠的</p>
         </li>
@@ -86,15 +86,15 @@
           <h3><a href="/">你是什么人便会遇上什么人</a></h3>
           <p>有时就为了一句狠话，像心头一口毒钉，永远麻痺着亲密感情交流。恶言，真要慎出，平日多誠心爱语，乃最简易之佈施。</p>
         </li>
-        <li><i><a href="/"><img src="../../../static/img/2.jpg"></a></i>
+        <li><i><a href="/"><img src="../../../static/img/1.jpg"></a></i>
           <h3><a href="/">爱情没有永远，地老天荒也走不完</a></h3>
           <p>也许，爱情没有永远，地老天荒也走不完，生命终结的末端，苦短情长。站在岁月的边端，那些美丽的定格，心伤的绝恋，都被四季的掩埋，一去不返。徒剩下这荒芜的花好月圆，一路相随，流离天涯背负了谁的思念？</p>
         </li>
-        <li><i><a href="/"><img src="../../../static/img/3.jpg"></a></i>
+        <li><i><a href="/"><img src="../../../static/img/1.jpg"></a></i>
           <h3><a href="/">男孩都有浪漫的小情怀——浪漫的求婚词</a></h3>
           <p>还在为浪漫的求婚词而烦恼不知道该怎么说吗？男孩子都有着浪漫的小情怀，对于求婚更是抱着满满的浪漫期待，也希望在求婚那一天对方可以给自己一个最浪漫的求婚词。</p>
         </li>
-        <li><i><a href="/"><img src="../../../static/img/4.jpg"></a></i>
+        <li><i><a href="/"><img src="../../../static/img/1.jpg"></a></i>
           <h3><a href="/">擦肩而过</a></h3>
           <p>《擦肩而过》文/清河鱼 编绘/天朝羽打开一扇窗，我不曾把你想得平常。看季节一一过往。你停留的那个地方，是否依然花儿开放？在夜里守靠着梦中的，想那仿佛前世铭刻进心肠的</p>
         </li>
@@ -102,23 +102,23 @@
           <h3><a href="/">男孩都有浪漫的小情怀——浪漫的求婚词</a></h3>
           <p>还在为浪漫的求婚词而烦恼不知道该怎么说吗？男孩子都有着浪漫的小情怀，对于求婚更是抱着满满的浪漫期待，也希望在求婚那一天对方可以给自己一个最浪漫的求婚词。</p>
         </li>
-        <li><i><a href="/"><img src="../../../static/img/5.jpg"></a></i>
+        <li><i><a href="/"><img src="../../../static/img/1.jpg"></a></i>
           <h3><a href="/">擦肩而过</a></h3>
           <p>《擦肩而过》文/清河鱼 编绘/天朝羽打开一扇窗，我不曾把你想得平常。看季节一一过往。你停留的那个地方，是否依然花儿开放？在夜里守靠着梦中的，想那仿佛前世铭刻进心肠的</p>
         </li>
-        <li><i><a href="/"><img src="../../../static/img/6.jpg"></a></i>
+        <li><i><a href="/"><img src="../../../static/img/1.jpg"></a></i>
           <h3><a href="/">男孩都有浪漫的小情怀——浪漫的求婚词</a></h3>
           <p>还在为浪漫的求婚词而烦恼不知道该怎么说吗？男孩子都有着浪漫的小情怀，对于求婚更是抱着满满的浪漫期待，也希望在求婚那一天对方可以给自己一个最浪漫的求婚词。</p>
         </li>
-        <li><i><a href="/"><img src="../../../static/img/7.jpg"></a></i>
+        <li><i><a href="/"><img src="../../../static/img/1.jpg"></a></i>
           <h3><a href="/">你是什么人便会遇上什么人</a></h3>
           <p>有时就为了一句狠话，像心头一口毒钉，永远麻痺着亲密感情交流。恶言，真要慎出，平日多誠心爱语，乃最简易之佈施。</p>
         </li>
-        <li><i><a href="/"><img src="../../../static/img/8.jpg"></a></i>
+        <li><i><a href="/"><img src="../../../static/img/1.jpg"></a></i>
           <h3><a href="/">爱情没有永远，地老天荒也走不完</a></h3>
           <p>也许，爱情没有永远，地老天荒也走不完，生命终结的末端，苦短情长。站在岁月的边端，那些美丽的定格，心伤的绝恋，都被四季的掩埋，一去不返。徒剩下这荒芜的花好月圆，一路相随，流离天涯背负了谁的思念？</p>
         </li>
-        <li><i><a href="/"><img src="../../../static/img/9.jpg"></a></i>
+        <li><i><a href="/"><img src="../../../static/img/1.jpg"></a></i>
           <h3><a href="/">擦肩而过</a></h3>
           <p>《擦肩而过》文/清河鱼 编绘/天朝羽打开一扇窗，我不曾把你想得平常。看季节一一过往。你停留的那个地方，是否依然花儿开放？在夜里守靠着梦中的，想那仿佛前世铭刻进心肠的</p>
         </li>
@@ -148,6 +148,20 @@ main { overflow: hidden; width: 68%; float: right; display: block; }
 .l_box div { background: rgba(255,255,255,0.5); margin-bottom: 20px; overflow: hidden }
 .l_box div ul { padding: 10px; overflow: hidden }
 
+.about_me img { width: 100% }
+.about_me p { line-height: 24px; font-size: 14px }
+.about_me i { width: 120px; float: left; clear: left; margin-right: 10px; height: 90px; overflow: hidden }
+.wdxc li { width: 32%; overflow: hidden; float: left; height: 80px; margin-bottom: 2px; margin-right: 2px }
+.wdxc li img {width: 100%; height:100%; -webkit-transition: all 0.5s; -moz-transition: all 0.5s; transition: all 0.5s; }
+.wdxc li img:hover { transform: scale(1.05) }
+.fenlei li { margin-bottom: 10px; margin-left: 10px }
+.tuijian li { text-overflow: ellipsis; white-space: nowrap; overflow: hidden; margin-bottom: 5px; background: url(../../../static/img/li.png) left center no-repeat; padding-left: 20px }
+.links a { display: block; float: left; margin: 0 10px 5px 0 }
+.guanzhu img { width: 100% }
+.l_box .search { border: 1px solid #000; background: #000; border-radius: 0 5px 5px 0; position: relative; }
+.search input.input_submit { border: 0; background: 0; color: #fff; outline: none; position: absolute; top: 10px; right: 8% }
+.search input.input_text { border: 0; line-height: 36px; height: 36px; width: 72%; padding-left: 10px; outline: none }
+
 .r_box li { background: rgba(255,255,255,0.8); padding: 15px; overflow: hidden; color: #797b7c; margin-bottom: 20px }
 .r_box li h3 { font-size: 16px; line-height: 25px; text-shadow: #FFF 1px 1px 1px }
 .r_box li h3 a { color: #222 }
@@ -157,12 +171,23 @@ main { overflow: hidden; width: 68%; float: right; display: block; }
 .r_box li p { margin: 20px 0 0 0; line-height: 22px; overflow: hidden; text-overflow: ellipsis; -webkit-box-orient: vertical; display: -webkit-box; -webkit-line-clamp: 2; }
 .r_box li:hover img { transform: scale(1.05) }
 .r_box li:hover h3 a { color: #19585d; }
+
+@media screen and (min-width: 960px) and (max-width: 1023px) {
+  article { width: 96% }
+  .tuijian, .guanzhu { width: 270px; }
+}
+@media screen and (min-width: 768px) and (max-width: 959px) {
+  article { width: 96% }
+}
 @media only screen and (min-width: 480px) and (max-width: 767px) {
+article { width: 96% }
 .l_box { display: none }
 .r_box, .infosbox, .picsbox, main { width: 100% }
 }
 @media only screen and (max-width: 479px) {
+article { width: 100% }
 .l_box { display: none }
 .r_box, .infosbox, .picsbox, main { width: 100% }
+.r_box li i { float: none; margin: 0 auto 20px; width: 100%; max-height: initial }
 }
 </style>
