@@ -135,6 +135,23 @@ export default {
   components: {
     navbar,
     bottomfooter
+  },
+  data: function () {
+    return {
+      articleList: ''
+    };
+  },
+  mounted: function () {
+    this.getArticleList();
+  },
+  methods: {
+    getArticleList: function () {
+      this.axios
+        .post('/tenList')
+        .then(response => {
+          console.log(response.data);
+        });
+    }
   }
 };
 </script>
