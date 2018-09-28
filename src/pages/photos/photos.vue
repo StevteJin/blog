@@ -32,7 +32,6 @@ export default {
     bottomfooter,
     pager
   },
-  // 参数
   data: function () {
     return {
       pageSize: '',
