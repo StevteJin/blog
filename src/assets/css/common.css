@@ -6,8 +6,6 @@ main { overflow: hidden; width: 68%; float: right; display: block; }
 .l_box div ul { padding: 10px; overflow: hidden }
 
 
-.fenlei li { margin-bottom: 10px; margin-left: 10px }
-.tuijian li { text-overflow: ellipsis; white-space: nowrap; overflow: hidden; margin-bottom: 5px; background: url(../../../static/img/li.png) left center no-repeat; padding-left: 20px }
 .links a { display: block; float: left; margin: 0 10px 5px 0 }
 .guanzhu img { width: 100% }
 .l_box .search { border: 1px solid #000; background: #000; border-radius: 0 5px 5px 0; position: relative; }
@@ -25,7 +23,7 @@ main { overflow: hidden; width: 68%; float: right; display: block; }
 .r_box li:hover h3 a { color: #19585d; }
 
 @media screen and (min-width: 960px) and (max-width: 1023px) {
-  .tuijian, .guanzhu { width: 270px; }
+  .guanzhu { width: 270px; }
 }
 @media only screen and (min-width: 480px) and (max-width: 767px) {
 .l_box { display: none }
