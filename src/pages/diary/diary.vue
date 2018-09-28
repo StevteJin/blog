@@ -36,47 +36,12 @@
         <guanzhu></guanzhu>
       </aside>
       <main class="r_box">
-        <li><i><a href="/"><img src="../../../static/img/1.jpg"></a></i>
-          <h3><a href="/">你是什么人便会遇上什么人</a></h3>
-          <p>有时就为了一句狠话，像心头一口毒钉，永远麻痺着亲密感情交流。恶言，真要慎出，平日多誠心爱语，乃最简易之佈施。</p>
+        <li v-for="(item,index) in articleList" :key="index">
+          <i><a href="/"><img :src="item.articleImg" alt=""></a></i>
+          <h3><a href="/">{{item.title}}</a></h3>
+          <p>{{item.description}}</p>
         </li>
-        <li><i><a href="/"><img src="../../../static/img/1.jpg"></a></i>
-          <h3><a href="/">爱情没有永远，地老天荒也走不完</a></h3>
-          <p>也许，爱情没有永远，地老天荒也走不完，生命终结的末端，苦短情长。站在岁月的边端，那些美丽的定格，心伤的绝恋，都被四季的掩埋，一去不返。徒剩下这荒芜的花好月圆，一路相随，流离天涯背负了谁的思念？</p>
-        </li>
-        <li><i><a href="/"><img src="../../../static/img/1.jpg"></a></i>
-          <h3><a href="/">女孩都有浪漫的小情怀——浪漫的求婚词</a></h3>
-          <p>还在为浪漫的求婚词而烦恼不知道该怎么说吗？女孩子都有着浪漫的小情怀，对于求婚更是抱着满满的浪漫期待，也希望在求婚那一天对方可以给自己一个最浪漫的求婚词。</p>
-        </li>
-        <li><i><a href="/"><img src="../../../static/img/1.jpg"></a></i>
-          <h3><a href="/">擦肩而过</a></h3>
-          <p>《擦肩而过》文/清河鱼 编绘/天朝羽打开一扇窗，我不曾把你想得平常。看季节一一过往。你停留的那个地方，是否依然花儿开放？在夜里守靠着梦中的，想那仿佛前世铭刻进心肠的</p>
-        </li>
-        <li><i><a href="/"><img src="../../../static/img/1.jpg"></a></i>
-          <h3><a href="/">女孩都有浪漫的小情怀——浪漫的求婚词</a></h3>
-          <p>还在为浪漫的求婚词而烦恼不知道该怎么说吗？女孩子都有着浪漫的小情怀，对于求婚更是抱着满满的浪漫期待，也希望在求婚那一天对方可以给自己一个最浪漫的求婚词。</p>
-        </li>
-        <li><i><a href="/"><img src="../../../static/img/1.jpg"></a></i>
-          <h3><a href="/">擦肩而过</a></h3>
-          <p>《擦肩而过》文/清河鱼 编绘/天朝羽打开一扇窗，我不曾把你想得平常。看季节一一过往。你停留的那个地方，是否依然花儿开放？在夜里守靠着梦中的，想那仿佛前世铭刻进心肠的</p>
-        </li>
-        <li><i><a href="/"><img src="../../../static/img/1.jpg"></a></i>
-          <h3><a href="/">女孩都有浪漫的小情怀——浪漫的求婚词</a></h3>
-          <p>还在为浪漫的求婚词而烦恼不知道该怎么说吗？女孩子都有着浪漫的小情怀，对于求婚更是抱着满满的浪漫期待，也希望在求婚那一天对方可以给自己一个最浪漫的求婚词。</p>
-        </li>
-        <li><i><a href="/"><img src="../../../static/img/1.jpg"></a></i>
-          <h3><a href="/">你是什么人便会遇上什么人</a></h3>
-          <p>有时就为了一句狠话，像心头一口毒钉，永远麻痺着亲密感情交流。恶言，真要慎出，平日多誠心爱语，乃最简易之佈施。</p>
-        </li>
-        <li><i><a href="/"><img src="../../../static/img/1.jpg"></a></i>
-          <h3><a href="/">爱情没有永远，地老天荒也走不完</a></h3>
-          <p>也许，爱情没有永远，地老天荒也走不完，生命终结的末端，苦短情长。站在岁月的边端，那些美丽的定格，心伤的绝恋，都被四季的掩埋，一去不返。徒剩下这荒芜的花好月圆，一路相随，流离天涯背负了谁的思念？</p>
-        </li>
-        <li><i><a href="/"><img src="../../../static/img/1.jpg"></a></i>
-          <h3><a href="/">擦肩而过</a></h3>
-          <p>《擦肩而过》文/清河鱼 编绘/天朝羽打开一扇窗，我不曾把你想得平常。看季节一一过往。你停留的那个地方，是否依然花儿开放？在夜里守靠着梦中的，想那仿佛前世铭刻进心肠的</p>
-        </li>
-        <div class="pagelist"><a class="allpage"><b>99</b></a>&nbsp;&nbsp;<a href="#" class="curPage">1</a>&nbsp;&nbsp;<a href="#" onclick="page(2)">2</a>&nbsp;&nbsp;<a href="#" onclick="page(3)">3</a>&nbsp;&nbsp;<a href="#" onclick="page(4)">4</a>&nbsp;&nbsp;<a href="#" onclick="page(5)">5</a>&nbsp;&nbsp;<a href="#" onclick="page(6)">6</a>&nbsp;&nbsp;<a href="#" onclick="page(7)">7</a>&nbsp;&nbsp;<a href="#" onclick="page(8)">8</a>&nbsp;&nbsp;<a href="#" onclick="page(9)">9</a>&nbsp;&nbsp;<a href="#" onclick="page(2)">下一页</a></div>
+        <pager v-if="pageSize" :pageSize="pageSize" v-model="pageNo" @on-jump="jump"></pager>
       </main>
     </article>
     <bottomfooter></bottomfooter>
@@ -92,13 +57,42 @@ import fenlei from '@/components/fenlei';
 import hotArticle from '@/components/hotArticle';
 // 关注
 import guanzhu from '@/components/guanzhu';
+import pager from '@/components/pager';
 export default {
   components: {
     navbar,
     bottomfooter,
     fenlei,
     hotArticle,
-    guanzhu
+    guanzhu,
+    pager
+  },
+  data: function () {
+    return {
+      pageSize: '',
+      pageNo: 1,
+      articleList: ''
+    };
+  },
+  mounted: function () {
+    this.getArticleList();
+  },
+  // 接收跳转事件
+  methods: {
+    jump: function (id) {
+      console.log(id);
+    },
+    getArticleList: function () {
+      this.axios
+        .post('/article', {
+          page: this.pageNo
+        })
+        .then(response => {
+          console.log(response.data);
+          this.articleList = response.data.data;
+          this.pageSize = parseInt(response.data.count / 8) + 1;
+        });
+    }
   }
 };
 </script>
@@ -109,14 +103,4 @@ export default {
 @media screen and (min-width: 960px) and (max-width: 1023px) {
   .tuijian { width: 270px; }
 }
-/*分页器的 s*/
-.pagelist { text-align: center; color: #666; width: 100%; clear: both; margin: 20px 0; padding-top: 20px }
-.pagelist a { color: #666; margin: 0 2px 5px 2px; display: inline-block; border: 1px solid #fff; padding: 5px 10px; background: #FFF }
-.pagelist a:hover { color: #19585d; }
-.pagelist > b { border: 1px solid #000; padding: 5px 10px; }
-a.curPage { color: #19585d; font-weight: bold; }
-@media only screen and (min-width: 480px) and (max-width: 767px) {
-  .pagelist a { padding: 2px 3px; }
-}
-/*分液器的 e*/
 </style>
