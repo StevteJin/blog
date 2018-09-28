@@ -73,13 +73,27 @@ export default {
   data: function () {
     return {
       pageSize: 6,
-      pageNo: 1
+      pageNo: 1,
+      photoList: ''
     };
+  },
+  mounted: function () {
+    this.getPhotoList();
   },
   // 接收跳转事件
   methods: {
     jump: function (id) {
       console.log(id);
+    },
+    getPhotoList: function () {
+      this.axios
+        .post('/photoList', {
+          page: this.pageNo
+        })
+        .then(response => {
+          console.log(response.data);
+          this.photoList = response.data.data;
+        });
     }
   }
 };
