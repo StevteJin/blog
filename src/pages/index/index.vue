@@ -5,9 +5,9 @@
       <aside class="l_box">
           <div class="about_me">
             <h2>关于我</h2>
-            <ul>
-              <i><img src="../../../static/img/1.jpg"></i>
-              <p><b>青松</b>，一个80后草根男站长！15年入行。一直潜心研究web前端技术，一边工作一边积累经验，分享一些技术心得。</p>
+            <ul v-for="(item,index) in aboutMine" :key="index">
+              <i><img :src="item.photo"></i>
+              <p>{{item.description}}</p>
             </ul>
           </div>
           <div class="wdxc">
@@ -52,7 +52,7 @@
       </aside>
       <main class="r_box">
         <li v-for="(item,index) in articleList" :key="index"><i><a href="/"><img :src="item.articleImg"></a></i>
-          <h3><a href="/">{{item.title}}</a></h3>
+          <h3><a href="/"><span class="hot">站长推荐=></span>{{item.title}}</a></h3>
           <p>{{item.description}}</p>
         </li>
       </main>
@@ -74,7 +74,8 @@ export default {
       articleList: '',
       classify: '',
       photoList: '',
-      friendShip: ''
+      friendShip: '',
+      aboutMine: ''
     };
   },
   mounted: function () {
@@ -82,8 +83,18 @@ export default {
     this.getArticleList();
     this.getClassfy();
     this.getFriendShip();
+    this.getAbout();
   },
   methods: {
+    // 个人介绍
+    getAbout: function () {
+      this.axios
+        .post('/about')
+        .then(response => {
+          console.log(response.data);
+          this.aboutMine = response.data.data;
+        });
+    },
     // 相册
     getPhotoList: function () {
       this.axios
@@ -132,4 +143,5 @@ export default {
 .wdxc li { width: 32%; overflow: hidden; float: left; height: 80px; margin-bottom: 2px; margin-right: 2px }
 .wdxc li img {width: 100%; height:100%; -webkit-transition: all 0.5s; -moz-transition: all 0.5s; transition: all 0.5s; }
 .wdxc li img:hover { transform: scale(1.05) }
+.hot{color:crimson;font-size:12px;}
 </style>
