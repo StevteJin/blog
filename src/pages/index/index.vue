@@ -33,10 +33,7 @@
           <div class="fenlei">
             <h2>文章分类</h2>
             <ul>
-              <li><a href="/">学无止境（33）</a></li>
-              <li><a href="/">日记（19）</a></li>
-              <li><a href="/">慢生活（520）</a></li>
-              <li><a href="/">美文欣赏（40）</a></li>
+              <li v-for="(item,index) in classify" :key="index"><a href="/">{{item.articleTypeName}}({{item.articleNum}})</a></li>
             </ul>
           </div>
           <div class="tuijian">
@@ -86,11 +83,13 @@ export default {
   },
   data: function () {
     return {
-      articleList: ''
+      articleList: '',
+      classify: ''
     };
   },
   mounted: function () {
     this.getArticleList();
+    this.getClassfy();
   },
   methods: {
     getArticleList: function () {
@@ -99,6 +98,14 @@ export default {
         .then(response => {
           console.log(response.data);
           this.articleList = response.data.data;
+        });
+    },
+    getClassfy: function () {
+      this.axios
+        .post('/classfy')
+        .then(response => {
+          console.log(response.data);
+          this.classify = response.data.data;
         });
     }
   }
