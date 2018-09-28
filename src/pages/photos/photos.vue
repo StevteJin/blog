@@ -93,7 +93,7 @@ export default {
         .then(response => {
           console.log(response.data);
           this.photoList = response.data.data;
-          this.pageSize = response.data.count;
+          this.pageSize = response.data.count / 8;
         });
     }
   }
