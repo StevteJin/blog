@@ -13,12 +13,7 @@
           <div class="wdxc">
             <h2>我的相册</h2>
             <ul>
-              <li><a href="/"><img src="../../../static/img/1.jpg"></a></li>
-              <li><a href="/"><img src="../../../static/img/1.jpg"></a></li>
-              <li><a href="/"><img src="../../../static/img/1.jpg"></a></li>
-              <li><a href="/"><img src="../../../static/img/1.jpg"></a></li>
-              <li><a href="/"><img src="../../../static/img/1.jpg"></a></li>
-              <li><a href="/"><img src="../../../static/img/1.jpg"></a></li>
+              <li v-for="(item,index) in photoList" :key="index"><a href="/"><img :src="item.img" alt=""></a></li>
             </ul>
           </div>
           <div class="search">
@@ -39,20 +34,13 @@
           <div class="tuijian">
             <h2>站长推荐</h2>
             <ul>
-              <li><a href="/">你是什么人便会遇上什么人</a></li>
-              <li><a href="/">帝国cms 列表页调用子栏目，没有则不显示栏目名称</a></li>
-              <li><a href="/">第二届 优秀个人博客模板比赛参选活动</a></li>
-              <li><a href="/">个人博客模板《绅士》后台管理</a></li>
-              <li><a href="/">你是什么人便会遇上什么人</a></li>
-              <li><a href="/">帝国cms 列表页调用子栏目，没有则不显示栏目名称</a></li>
-              <li><a href="/">第二届 优秀个人博客模板比赛参选活动</a></li>
-              <li><a href="/">个人博客模板《绅士》后台管理</a></li>
+              <li v-for="(item,index) in recommendedList" :key="index"><a href="/">{{item.title}}</a></li>
             </ul>
           </div>
           <div class="links">
             <h2>友情链接</h2>
             <ul>
-              <a href="http://www.yangqq.com">青松个人博客</a> <a href="http://www.yangqq.com">青松博客</a>
+              <a :href="item.href" v-for="(item,index) in friendShip" :key="index">{{item.name}}</a>
             </ul>
           </div>
           <div class="guanzhu">
@@ -84,14 +72,30 @@ export default {
   data: function () {
     return {
       articleList: '',
-      classify: ''
+      classify: '',
+      recommendedList: '',
+      photoList: '',
+      friendShip: ''
     };
   },
   mounted: function () {
+    this.getPhotoList();
     this.getArticleList();
     this.getClassfy();
+    this.getRecommended();
+    this.getFriendShip();
   },
   methods: {
+    // 相册
+    getPhotoList: function () {
+      this.axios
+        .post('/photoAlbum')
+        .then(response => {
+          console.log(response.data);
+          this.photoList = response.data.data;
+        });
+    },
+    // 文章列表
     getArticleList: function () {
       this.axios
         .post('/tenList')
@@ -100,12 +104,31 @@ export default {
           this.articleList = response.data.data;
         });
     },
+    // 文章分类
     getClassfy: function () {
       this.axios
         .post('/classfy')
         .then(response => {
           console.log(response.data);
           this.classify = response.data.data;
+        });
+    },
+    // 站长推荐
+    getRecommended: function () {
+      this.axios
+        .post('/recommended')
+        .then(response => {
+          console.log(response.data);
+          this.recommendedList = response.data.data;
+        });
+    },
+    // 友情链接
+    getFriendShip: function () {
+      this.axios
+        .post('/friendShip')
+        .then(response => {
+          console.log(response.data);
+          this.friendShip = response.data.data;
         });
     }
   }
