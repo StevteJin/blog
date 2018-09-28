@@ -3,24 +3,8 @@
     <navbar></navbar>
     <article>
         <aside class="l_box">
-            <div class="about_me">
-            <h2>关于我</h2>
-            <ul>
-                <i><img :src="aboutMine.photo"></i>
-                <p>{{aboutMine.description}}</p>
-            </ul>
-            </div>
-            <div class="wdxc">
-            <h2>我的相册</h2>
-            <ul>
-                <li><a href="/"><img src="../../../static/img/1.jpg"></a></li>
-                <li><a href="/"><img src="../../../static/img/1.jpg"></a></li>
-                <li><a href="/"><img src="../../../static/img/1.jpg"></a></li>
-                <li><a href="/"><img src="../../../static/img/1.jpg"></a></li>
-                <li><a href="/"><img src="../../../static/img/1.jpg"></a></li>
-                <li><a href="/"><img src="../../../static/img/1.jpg"></a></li>
-            </ul>
-            </div>
+            <about-me></about-me>
+            <wdxc></wdxc>
             <div class="search">
             <form action="/e/search/index.php" method="post" name="searchform" id="searchform">
                 <input name="keyboard" id="keyboard" class="input_text" value="请输入关键字词" style="color: rgb(153, 153, 153);" onfocus="if(value=='请输入关键字词'){this.style.color='#000';value=''}" onblur="if(value==''){this.style.color='#999';value='请输入关键字词'}" type="text">
@@ -30,21 +14,8 @@
                 <input name="Submit" class="input_submit" value="搜索" type="submit">
             </form>
             </div>
-            <div class="fenlei">
-            <h2>文章分类</h2>
-            <ul>
-                <li><a href="/">学无止境（33）</a></li>
-                <li><a href="/">日记（19）</a></li>
-                <li><a href="/">慢生活（520）</a></li>
-                <li><a href="/">美文欣赏（40）</a></li>
-            </ul>
-            </div>
-            <div class="guanzhu">
-            <h2>关注我 么么哒</h2>
-            <ul>
-                <img src="../../../static/img/wx.jpg">
-            </ul>
-            </div>
+            <fenlei></fenlei>
+            <guanzhu></guanzhu>
         </aside>
         <main class="r_box">
             <div class="about" v-html="aboutMine.content"></div>
@@ -57,10 +28,22 @@
 <script>
 import navbar from '@/components/navbar';
 import bottomfooter from '@/components/footer';
+// 个人简介
+import aboutMe from '@/components/aboutMe';
+// 文章分类
+import fenlei from '@/components/fenlei';
+// 相册分类
+import wdxc from '@/components/wdxc';
+// 关注
+import guanzhu from '@/components/guanzhu';
 export default {
   components: {
     navbar,
-    bottomfooter
+    bottomfooter,
+    aboutMe,
+    fenlei,
+    wdxc,
+    guanzhu
   },
   data: function () {
     return {

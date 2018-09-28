@@ -22,12 +22,7 @@
               <a :href="item.href" v-for="(item,index) in friendShip" :key="index">{{item.name}}</a>
             </ul>
           </div>
-          <div class="guanzhu">
-            <h2>关注我 么么哒</h2>
-            <ul>
-              <img src="../../../static/img/wx.jpg">
-            </ul>
-          </div>
+          <guanzhu></guanzhu>
       </aside>
       <main class="r_box">
         <li v-for="(item,index) in articleList" :key="index"><i><a href="/"><img :src="item.articleImg"></a></i>
@@ -51,6 +46,9 @@ import fenlei from '@/components/fenlei';
 import wdxc from '@/components/wdxc';
 // 站长推荐
 import hotArticle from '@/components/hotArticle';
+// 关注
+import guanzhu from '@/components/guanzhu';
+
 export default {
   components: {
     navbar,
@@ -58,7 +56,8 @@ export default {
     aboutMe,
     fenlei,
     wdxc,
-    hotArticle
+    hotArticle,
+    guanzhu
   },
   data: function () {
     return {

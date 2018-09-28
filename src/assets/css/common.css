@@ -7,7 +7,6 @@ main { overflow: hidden; width: 68%; float: right; display: block; }
 
 
 .links a { display: block; float: left; margin: 0 10px 5px 0 }
-.guanzhu img { width: 100% }
 .l_box .search { border: 1px solid #000; background: #000; border-radius: 0 5px 5px 0; position: relative; }
 .search input.input_submit { border: 0; background: 0; color: #fff; outline: none; position: absolute; top: 10px; right: 8% }
 .search input.input_text { border: 0; line-height: 36px; height: 36px; width: 72%; padding-left: 10px; outline: none }
@@ -22,9 +21,7 @@ main { overflow: hidden; width: 68%; float: right; display: block; }
 .r_box li:hover img { transform: scale(1.05) }
 .r_box li:hover h3 a { color: #19585d; }
 
-@media screen and (min-width: 960px) and (max-width: 1023px) {
-  .guanzhu { width: 270px; }
-}
+
 @media only screen and (min-width: 480px) and (max-width: 767px) {
 .l_box { display: none }
 .r_box, .infosbox, .picsbox, main { width: 100% }
