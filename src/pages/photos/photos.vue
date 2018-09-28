@@ -52,7 +52,8 @@
             </a></li>
           </ul>
         </div>
-        <div class="pagelist"><a class="allpage"><b>99</b></a>&nbsp;&nbsp;<a href="#" class="curPage">1</a>&nbsp;&nbsp;<a href="#" onclick="page(2)">2</a>&nbsp;&nbsp;<a href="#" onclick="page(3)">3</a>&nbsp;&nbsp;<a href="#" onclick="page(4)">4</a>&nbsp;&nbsp;<a href="#" onclick="page(5)">5</a>&nbsp;&nbsp;<a href="#" onclick="page(6)">6</a>&nbsp;&nbsp;<a href="#" onclick="page(7)">7</a>&nbsp;&nbsp;<a href="#" onclick="page(8)">8</a>&nbsp;&nbsp;<a href="#" onclick="page(9)">9</a>&nbsp;&nbsp;<a href="#" onclick="page(2)">下一页</a></div>
+        <!--html调用 参数:pageSize(总页数);pageNo(当前页)-->
+        <pager :pageSize="pageSize" v-model="pageNo" @on-jump="jump"></pager>
     </article>
     <bottomfooter></bottomfooter>
   </div>
@@ -61,14 +62,28 @@
 <script>
 import navbar from '@/components/navbar';
 import bottomfooter from '@/components/footer';
+import pager from '@/components/pager';
 export default {
   components: {
     navbar,
-    bottomfooter
+    bottomfooter,
+    pager
+  },
+  // 参数
+  data: function () {
+    return {
+      pageSize: 6,
+      pageNo: 1
+    };
+  },
+  // 接收跳转事件
+  methods: {
+    jump: function (id) {
+      console.log(id);
+    }
   }
 };
 </script>
-
 <style scoped>
 .navicon { display: block; position: relative; width: 30px; height: 5px; background-color: #000; margin-top: 20px }
 .navicon:before, .navicon:after { content: ''; display: block; width: 30px; height: 5px; position: absolute; background: #000; -webkit-transition-property: margin, -webkit-transform; transition-property: margin, -webkit-transform; transition-property: margin, transform; transition-property: margin, transform, -webkit-transform; -webkit-transition-duration: 300ms; transition-duration: 300ms; }
@@ -79,13 +94,6 @@ export default {
 .open .navicon:after { margin-top: 0; -webkit-transform: rotate(-45deg); transform: rotate(-45deg); }
 .open .navicon:before, .open .navicon:after { content: ''; display: block; width: 30px; height: 5px; position: absolute; background: #000; }
 
-/*分页器的 s*/
-.pagelist { text-align: center; color: #666; width: 100%; clear: both; margin: 20px 0; padding-top: 20px }
-.pagelist a { color: #666; margin: 0 2px 5px 2px; display: inline-block; border: 1px solid #fff; padding: 5px 10px; background: #FFF }
-.pagelist a:hover { color: #19585d; }
-.pagelist > b { border: 1px solid #000; padding: 5px 10px; }
-a.curPage { color: #19585d; font-weight: bold; }
-/*分液器的 e*/
 .picbox { width: 100%; overflow: hidden; }
 .picbox ul { overflow: hidden; width: 24%; float: left; margin-right: 10px }
 .picbox ul li { display: block; background: #FFF; margin: 0 0 20px 0; border: 1px #d9d9d9 solid; }
@@ -96,10 +104,8 @@ a.curPage { color: #19585d; font-weight: bold; }
 .picbox ul li a:hover { color: #19585d }
 @media screen and (min-width: 768px) and (max-width: 959px) {
   .picbox ul { width: 23%; }
-  .pagelist a { padding: 2px 3px; }
 }
 @media only screen and (min-width: 480px) and (max-width: 767px) {
-  .pagelist a { padding: 2px 3px; }
   .picbox ul { width: 22%; }
   .picbox ul li i { margin: 5px }
   .picinfo { display: none }
