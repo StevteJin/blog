@@ -28,7 +28,7 @@ export default {
           content: '我的相册'
         }, {
           href: '#/diary',
-          content: '我的日记'
+          content: '我的文章'
         }, {
           href: '#/about',
           content: '关于我'

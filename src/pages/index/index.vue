@@ -34,7 +34,7 @@
           <div class="tuijian">
             <h2>站长推荐</h2>
             <ul>
-              <li v-for="(item,index) in recommendedList" :key="index"><a href="/">{{item.title}}</a></li>
+              <li v-for="(item,index) in articleList" :key="index"><a href="/">{{item.title}}</a></li>
             </ul>
           </div>
           <div class="links">
@@ -73,7 +73,6 @@ export default {
     return {
       articleList: '',
       classify: '',
-      recommendedList: '',
       photoList: '',
       friendShip: ''
     };
@@ -82,7 +81,6 @@ export default {
     this.getPhotoList();
     this.getArticleList();
     this.getClassfy();
-    this.getRecommended();
     this.getFriendShip();
   },
   methods: {
@@ -95,7 +93,7 @@ export default {
           this.photoList = response.data.data;
         });
     },
-    // 文章列表
+    // 文章列表，站长推荐
     getArticleList: function () {
       this.axios
         .post('/tenList')
@@ -111,15 +109,6 @@ export default {
         .then(response => {
           console.log(response.data);
           this.classify = response.data.data;
-        });
-    },
-    // 站长推荐
-    getRecommended: function () {
-      this.axios
-        .post('/recommended')
-        .then(response => {
-          console.log(response.data);
-          this.recommendedList = response.data.data;
         });
     },
     // 友情链接
