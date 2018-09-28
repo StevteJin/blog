@@ -100,7 +100,7 @@ export default {
 .pager-prev,.pager-next{color: #666; margin: 0 2px 5px 2px; display: inline-block; border: 1px solid #fff; padding: 5px 10px; background: #FFF }
 .pager-prev:hover,.pager-next:hover,.pager-prev:active,.pager-next:active{color: red; font-weight: bold;}
 .pager-box span { color: #666; margin: 0 2px 5px 2px; display: inline-block; border: 1px solid #fff; padding: 5px 10px; background: #FFF }
-.pager-box span:hover { color: #19585d; }
+.pager-box span:hover { color: red; }
 .pager-curr{ color: red; font-weight: bold;}
 /*分页器的 e*/
 </style>

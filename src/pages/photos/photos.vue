@@ -3,53 +3,16 @@
     <navbar></navbar>
     <article>
         <div class="picbox">
-          <ul>
-            <li data-scroll-reveal="enter bottom over 1s" ><a href="/"><i><img src="../../../static/img/1.jpg"></i>
+          <ul v-for="(item,index) in photoList" :key="index">
+            <li>
+              <a href="/">
+                <i><img :src="item.img" alt=""></i>
                 <div class="picinfo">
-                <h3>个人博客模板《simple》</h3>
-                <span>好咖啡要和朋友一起品尝，好“模板”也要和同样喜欢它的人一起分享。</span> </div>
-                </a></li>
-            <li data-scroll-reveal="enter bottom over 1s" ><a href="/"><i><img src="../../../static/img/1.jpg"></i>
-              <div class="picinfo">
-              <h3>个人博客模板《simple》</h3>
-              <span>好咖啡要和朋友一起品尝，好“模板”也要和同样喜欢它的人一起分享。</span> </div>
-              </a></li>
-          </ul>
-          <ul>
-            <li data-scroll-reveal="enter bottom over 1s" ><a href="/"><i><img src="../../../static/img/1.jpg"></i>
-            <div class="picinfo">
-            <h3>个人博客模板《simple》</h3>
-            <span>好咖啡要和朋友一起品尝，好“模板”也要和同样喜欢它的人一起分享。</span> </div>
-            </a></li>
-            <li data-scroll-reveal="enter bottom over 1s" ><a href="/"><i><img src="../../../static/img/1.jpg"></i>
-            <div class="picinfo">
-            <h3>个人博客模板《simple》</h3>
-            <span>好咖啡要和朋友一起品尝，好“模板”也要和同样喜欢它的人一起分享。</span> </div>
-            </a></li>
-          </ul>
-          <ul>
-            <li data-scroll-reveal="enter bottom over 1s" ><a href="/"><i><img src="../../../static/img/1.jpg"></i>
-            <div class="picinfo">
-            <h3>个人博客模板《simple》</h3>
-            <span>好咖啡要和朋友一起品尝，好“模板”也要和同样喜欢它的人一起分享。</span> </div>
-            </a></li>
-            <li data-scroll-reveal="enter bottom over 1s" ><a href="/"><i><img src="../../../static/img/1.jpg"></i>
-            <div class="picinfo">
-            <h3>个人博客模板《simple》</h3>
-            <span>好咖啡要和朋友一起品尝，好“模板”也要和同样喜欢它的人一起分享。</span> </div>
-            </a></li>
-          </ul>
-          <ul>
-            <li data-scroll-reveal="enter bottom over 1s" ><a href="/"><i><img src="../../../static/img/1.jpg"></i>
-            <div class="picinfo">
-            <h3>个人博客模板《simple》</h3>
-            <span>好咖啡要和朋友一起品尝，好“模板”也要和同样喜欢它的人一起分享。</span> </div>
-            </a></li>
-            <li data-scroll-reveal="enter bottom over 1s" ><a href="/"><i><img src="../../../static/img/1.jpg"></i>
-            <div class="picinfo">
-            <h3>个人博客模板《simple》</h3>
-            <span>好咖啡要和朋友一起品尝，好“模板”也要和同样喜欢它的人一起分享。</span> </div>
-            </a></li>
+                  <h3>{{item.title}}</h3>
+                  <span>{{item.description}}</span>
+                </div>
+              </a>
+            </li>
           </ul>
         </div>
         <!--html调用 参数:pageSize(总页数);pageNo(当前页)-->
