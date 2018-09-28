@@ -53,7 +53,7 @@
           </ul>
         </div>
         <!--html调用 参数:pageSize(总页数);pageNo(当前页)-->
-        <pager :pageSize="pageSize" v-model="pageNo" @on-jump="jump"></pager>
+        <pager v-if="pageSize" :pageSize="pageSize" v-model="pageNo" @on-jump="jump"></pager>
     </article>
     <bottomfooter></bottomfooter>
   </div>
@@ -72,7 +72,7 @@ export default {
   // 参数
   data: function () {
     return {
-      pageSize: 6,
+      pageSize: '',
       pageNo: 1,
       photoList: ''
     };
@@ -93,6 +93,7 @@ export default {
         .then(response => {
           console.log(response.data);
           this.photoList = response.data.data;
+          this.pageSize = response.data.count;
         });
     }
   }
