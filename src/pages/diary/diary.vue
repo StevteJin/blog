@@ -17,14 +17,7 @@
         <div class="tuijian">
           <h2>点击排行</h2>
           <ul>
-            <li><a href="/">你是什么人便会遇上什么人</a></li>
-            <li><a href="/">帝国cms 列表页调用子栏目，没有则不显示栏目名称</a></li>
-            <li><a href="/">第二届 优秀个人博客模板比赛参选活动</a></li>
-            <li><a href="/">个人博客模板《绅士》后台管理</a></li>
-            <li><a href="/">你是什么人便会遇上什么人</a></li>
-            <li><a href="/">帝国cms 列表页调用子栏目，没有则不显示栏目名称</a></li>
-            <li><a href="/">第二届 优秀个人博客模板比赛参选活动</a></li>
-            <li><a href="/">个人博客模板《绅士》后台管理</a></li>
+            <li v-for="(item,index) in hotRead" :key="index"><a href="/">{{item.title}}</a></li>
           </ul>
         </div>
         <div class="cloud">
@@ -71,10 +64,12 @@ export default {
     return {
       pageSize: '',
       pageNo: 1,
-      articleList: ''
+      articleList: '',
+      hotRead: ''
     };
   },
   mounted: function () {
+    this.getHotRead();
     this.getArticleList();
   },
   // 接收跳转事件
@@ -91,6 +86,14 @@ export default {
           console.log(response.data);
           this.articleList = response.data.data;
           this.pageSize = parseInt(response.data.count / 8) + 1;
+        });
+    },
+    getHotRead: function () {
+      this.axios
+        .post('/hotRead')
+        .then(response => {
+          console.log(response.data);
+          this.hotRead = response.data.data;
         });
     }
   }
