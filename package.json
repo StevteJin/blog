@@ -1,7 +1,7 @@
 {
-  "name": "m",
+  "name": "myblog",
   "version": "1.0.0",
-  "description": "A Vue.js project",
+  "description": "jinqingsong's blog",
   "author": "金 <1211050148@qq.com>",
   "private": true,
   "scripts": {
