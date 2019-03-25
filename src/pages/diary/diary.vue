@@ -66,6 +66,15 @@ export default {
     this.getHotRead();
     this.getArticleList();
   },
+  watch: {
+    pageNo: {
+      handler (newVal, oldVal) {
+        this.pageNo = newVal;
+        this.getArticleList();
+      },
+      deep: true
+    }
+  },
   // 接收跳转事件
   methods: {
     jump: function (id) {
