@@ -4,28 +4,34 @@
     <article>
       <aside class="l_box">
         <div class="search">
-            <form action="/e/search/index.php" method="post" name="searchform" id="searchform">
-                <input name="keyboard" id="keyboard" class="input_text" value="请输入关键字词" style="color: rgb(153, 153, 153);" onfocus="if(value=='请输入关键字词'){this.style.color='#000';value=''}" onblur="if(value==''){this.style.color='#999';value='请输入关键字词'}" type="text">
-                <input name="show" value="title" type="hidden">
-                <input name="tempid" value="1" type="hidden">
-                <input name="tbname" value="news" type="hidden">
-                <input name="Submit" class="input_submit" value="搜索" type="submit">
-            </form>
+          <form action="/e/search/index.php" method="post" name="searchform" id="searchform">
+            <input name="keyboard" id="keyboard" class="input_text" value="请输入关键字词" style="color: rgb(153, 153, 153);" onfocus="if(value=='请输入关键字词'){this.style.color='#000';value=''}" onblur="if(value==''){this.style.color='#999';value='请输入关键字词'}" type="text">
+            <input name="show" value="title" type="hidden">
+            <input name="tempid" value="1" type="hidden">
+            <input name="tbname" value="news" type="hidden">
+            <input name="Submit" class="input_submit" value="搜索" type="submit">
+          </form>
         </div>
         <fenlei></fenlei>
         <hot-article></hot-article>
         <div class="tuijian">
           <h2>点击排行</h2>
           <ul>
-            <li v-for="(item,index) in hotRead" :key="index"><a href="/">{{item.title}}</a></li>
+            <li v-for="(item,index) in hotRead" :key="index">
+              <a href="/">{{item.title}}</a>
+            </li>
           </ul>
         </div>
         <guanzhu></guanzhu>
       </aside>
       <main class="r_box">
         <li v-for="(item,index) in articleList" :key="index">
-          <i><a href="/"><img :src="item.articleImg" alt=""></a></i>
-          <h3><a href="/">{{item.title}}</a></h3>
+          <i>
+            <a href="/"><img :src="item.articleImg" alt=""></a>
+          </i>
+          <h3>
+            <a href="/">{{item.title}}</a>
+          </h3>
           <p>{{item.description}}</p>
         </li>
         <pager v-if="pageSize" :pageSize="pageSize" v-model="pageNo" @on-jump="jump"></pager>
@@ -36,15 +42,15 @@
 </template>
 
 <script>
-import navbar from '@/components/navbar';
-import bottomfooter from '@/components/footer';
+import navbar from "@/components/navbar";
+import bottomfooter from "@/components/footer";
 // 文章分类
-import fenlei from '@/components/fenlei';
+import fenlei from "@/components/fenlei";
 // 站长推荐
-import hotArticle from '@/components/hotArticle';
+import hotArticle from "@/components/hotArticle";
 // 关注
-import guanzhu from '@/components/guanzhu';
-import pager from '@/components/pager';
+import guanzhu from "@/components/guanzhu";
+import pager from "@/components/pager";
 export default {
   components: {
     navbar,
@@ -54,59 +60,62 @@ export default {
     guanzhu,
     pager
   },
-  data: function () {
+  data: function() {
     return {
-      pageSize: '',
+      pageSize: "",
       pageNo: 1,
-      articleList: '',
-      hotRead: ''
+      articleList: "",
+      hotRead: ""
     };
   },
-  mounted: function () {
+  mounted: function() {
     this.getHotRead();
     this.getArticleList();
   },
-  watch: {
-    pageNo: {
-      handler (newVal, oldVal) {
-        this.pageNo = newVal;
-        this.getArticleList();
-      },
-      deep: true
-    }
-  },
   // 接收跳转事件
   methods: {
-    jump: function (id) {
-      console.log(id);
+    jump: function(pageNo) {
+      this.pageNo=pageNo;
+      this.getArticleList();
     },
-    getArticleList: function () {
+    getArticleList: function() {
       this.axios
-        .post('/article', {
+        .post("/article", {
           page: this.pageNo
         })
         .then(response => {
           console.log(response.data);
           this.articleList = response.data.data;
-          this.pageSize = parseInt(response.data.count / 8) + 1;
+          if (response.data.count % 8 > 0) {
+            this.pageSize = parseInt(response.data.count / 8) + 1;
+          } else {
+            this.pageSize = parseInt(response.data.count / 8);
+          }
         });
     },
-    getHotRead: function () {
-      this.axios
-        .post('/hotRead')
-        .then(response => {
-          console.log(response.data);
-          this.hotRead = response.data.data;
-        });
+    getHotRead: function() {
+      this.axios.post("/hotRead").then(response => {
+        console.log(response.data);
+        this.hotRead = response.data.data;
+      });
     }
   }
 };
 </script>
 
 <style scoped>
-@import '../../assets/css/common.css';
-.tuijian li { text-overflow: ellipsis; white-space: nowrap; overflow: hidden; margin-bottom: 5px; background: url(../../../static/img/li.png) left center no-repeat; padding-left: 20px }
+@import "../../assets/css/common.css";
+.tuijian li {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  margin-bottom: 5px;
+  background: url(../../../static/img/li.png) left center no-repeat;
+  padding-left: 20px;
+}
 @media screen and (min-width: 960px) and (max-width: 1023px) {
-  .tuijian { width: 270px; }
+  .tuijian {
+    width: 270px;
+  }
 }
 </style>
