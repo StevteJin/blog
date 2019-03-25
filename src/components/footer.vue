@@ -1,8 +1,8 @@
 <template>
     <footer>
         <p>Design by
-            <a href="http://www.yangqq.com" target="_blank">青松个人博客</a>
-            <a href="/">蜀ICP备11002373号-1</a>
+            <a href="http://www.blog.jinqingsong.com" target="_blank">青松个人博客</a>
+            <a href="http://www.miitbeian.gov.cn">浙ICP备16004290号</a>
         </p>
     </footer>
 </template>
