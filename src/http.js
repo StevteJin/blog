@@ -6,7 +6,7 @@ import router from './router';
 // 设置请求超时时间，现在，在超时前，所有请求都会等待 2.5 秒
 axios.defaults.timeout = 5000;
 // 设置接口的域名
-axios.defaults.baseURL = 'http://localhost:8088/';
+axios.defaults.baseURL = 'http://localhost:8086';
 
 axios.defaults.withCredentials = true;// 让ajax携带cookie
 
