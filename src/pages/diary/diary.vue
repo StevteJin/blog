@@ -27,10 +27,10 @@
       <main class="r_box">
         <li v-for="(item,index) in articleList" :key="index">
           <i>
-            <a href="/"><img :src="item.articleImg" alt=""></a>
+            <a><img :src="item.articleImg" alt=""></a>
           </i>
           <h3>
-            <a href="/">{{item.title}}</a>
+            <a>{{item.title}}</a>
           </h3>
           <p>{{item.description}}</p>
         </li>
@@ -93,6 +93,7 @@ export default {
           }
         });
     },
+    //热门的文章，点击排行列表
     getHotRead: function() {
       this.axios.post("/hotRead").then(response => {
         console.log(response.data);
